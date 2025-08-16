@@ -26,8 +26,13 @@ This repository contains a simple Express.js application designed to help you le
 
 ```
 leaning-ci-cd/
-├── index.js          # Main Express.js application
+├── index.js          # Server entry point
+├── app.js            # Express.js application
 ├── package.json      # Node.js dependencies and scripts
+├── yarn.lock         # Yarn dependency lock file
+├── tests/            # Test directory
+│   └── app.test.js   # Application tests
+├── .mocharc.json     # Mocha test configuration
 ├── Dockerfile        # Docker container configuration
 ├── .dockerignore     # Files to exclude from Docker build
 ├── .gitignore        # Files to exclude from Git
@@ -51,16 +56,21 @@ leaning-ci-cd/
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   yarn install
    ```
 
 3. **Run the application**:
    ```bash
-   npm start
+   yarn start
    ```
 
-4. **Access the application**:
-   Open your browser and navigate to `http://localhost:3000`
+4. **Run tests**:
+   ```bash
+   yarn test
+   ```
+
+5. **Access the application**:
+   Open your browser and navigate to `http://localhost:8080`
 
 ### Docker Development
 
@@ -235,12 +245,22 @@ jobs:
 
 ## Next Steps
 
-1. **Add Testing**: Implement unit and integration tests
+1. **✅ Add Testing**: Unit and integration tests are implemented using Mocha, Chai, and Supertest
 2. **Set up CI Pipeline**: Configure GitHub Actions or another CI/CD tool
 3. **Add Linting**: Implement ESLint and Prettier
 4. **Environment Configuration**: Add development, staging, and production configs
 5. **Monitoring**: Add logging and monitoring capabilities
 6. **Security**: Implement security best practices and scanning
+
+## Current Testing Setup
+
+This project uses:
+- **Mocha**: Test framework
+- **Chai**: Assertion library  
+- **Supertest**: HTTP assertion library for testing Express apps
+- **ES Modules**: Modern JavaScript module system
+
+The project is configured to use ES modules (`"type": "module"` in package.json), so all imports use the modern `import/export` syntax.
 
 ## Contributing
 
