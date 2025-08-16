@@ -24,7 +24,7 @@ jobs:
         run: ls -la
 
       - name: Display current directory
-        run: ls ${{GITHUB_WORKSPACE}}
+        run: ls $GITHUB_WORKSPACE
 
       - name: Print GitHub context
         env:
