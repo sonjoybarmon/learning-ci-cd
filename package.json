@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha tests/*.js"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +12,9 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "supertest": "^7.1.4"
   }
 }
