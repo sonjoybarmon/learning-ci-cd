@@ -16,10 +16,10 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install --frozen-lockfile
 
       - name: Run tests
-        run: npm test
+        run: yarn test
 
       - name: Display test results
         run: echo "Tests passed successfully!"
